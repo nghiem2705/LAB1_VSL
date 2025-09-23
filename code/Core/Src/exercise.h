@@ -18,4 +18,7 @@ void exercise1_run();
 void exercise2_init();
 void exercise2_run();
 
+//exercise3
+void exercise3_init();
+void exercise3_run();
 #endif /* SRC_EXERCISE_H_ */
