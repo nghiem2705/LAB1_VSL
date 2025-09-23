@@ -30,12 +30,12 @@ void exercise2_run() {
 		HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
 	}
 
-	else if (count < 7) {
-		HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
+	else if (count < 8) {
+		HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, SET);
 	}
 
 	else {
-		HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, SET);
+		HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, SET);
 	}
 
 	count = (count + 1) % 10 ;
