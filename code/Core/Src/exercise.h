@@ -10,6 +10,11 @@
 
 #include "main.h"
 
+#define state1 1 // LED_RED ON , LED_GREEN1 ON, OTHERS OFF
+#define state2 2 // LED_RED ON , LED_YELLOW ON, OTHERS OFF
+#define state3 3 // LED_GREEN ON, LED_RED1 ON, OTHERS OFF
+#define state4 4 // LED_YELLOW ON, LED_RED1 ON, OTHERS OFF
+
 //exercise1
 void exercise1_init();
 void exercise1_run();
