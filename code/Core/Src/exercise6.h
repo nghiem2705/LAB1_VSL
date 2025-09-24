@@ -11,6 +11,6 @@
 #include "main.h"
 
 void displayNumber(int num);
-
+void exercise7_run();
 
 #endif /* SRC_EXERCISE6_H_ */
