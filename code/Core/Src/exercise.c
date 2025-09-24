@@ -96,3 +96,7 @@ void exercise3_run() {
     count1 = (count1 + 1) % 10;
     HAL_Delay(1000);
 }
+
+void exercise5_run() {
+
+}
