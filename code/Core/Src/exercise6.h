@@ -12,5 +12,6 @@
 
 void displayNumber(int num);
 void exercise7_run();
+void setNumberOnClock(int num);
 
 #endif /* SRC_EXERCISE6_H_ */
