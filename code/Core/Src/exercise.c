@@ -97,6 +97,60 @@ void exercise3_run() {
     HAL_Delay(1000);
 }
 
-void exercise5_run() {
 
+//exercise5
+const uint8_t digits[10][7] = {
+  {0,0,0,0,0,0,1}, //0
+  {1,0,0,1,1,1,1}, //1
+  {0,0,1,0,0,1,0}, //2
+  {0,0,0,0,1,1,0}, //3
+  {1,0,0,1,1,0,0}, //4
+  {0,1,0,0,1,0,0}, //5
+  {0,1,0,0,0,0,0}, //6
+  {0,0,0,1,1,1,1}, //7
+  {0,0,0,0,0,0,0}, //8
+  {0,0,0,0,1,0,0}  //9
+};
+
+
+uint8_t a = 0;
+uint8_t b = 0;
+uint8_t c = 0;
+uint8_t d = 0;
+uint8_t e = 0;
+uint8_t f = 0;
+uint8_t g = 0;
+
+void display7SEG(int count) {
+    a = digits[count][0];
+    b = digits[count][1];
+    c = digits[count][2];
+    d = digits[count][3];
+    e = digits[count][4];
+    f = digits[count][5];
+    g = digits[count][6];
+
+    HAL_GPIO_WritePin(SEG_A_GPIO_Port, SEG_A_Pin, a);
+    HAL_GPIO_WritePin(SEG_B_GPIO_Port, SEG_B_Pin, b);
+    HAL_GPIO_WritePin(SEG_C_GPIO_Port, SEG_C_Pin, c);
+    HAL_GPIO_WritePin(SEG_D_GPIO_Port, SEG_D_Pin, d);
+    HAL_GPIO_WritePin(SEG_E_GPIO_Port, SEG_E_Pin, e);
+    HAL_GPIO_WritePin(SEG_F_GPIO_Port, SEG_F_Pin, f);
+    HAL_GPIO_WritePin(SEG_G_GPIO_Port, SEG_G_Pin, g);
+}
+
+
+int set_time = 0 ;
+
+void exercise5_run() {
+	exercise3_run();
+	if(count1 == 0) {
+		set_time = 5 ;
+	}else if (count1 == 5) {
+		set_time = 3;
+	}else {
+		set_time = 2 ;
+	}
+
+	display7SEG(set_time--);
 }

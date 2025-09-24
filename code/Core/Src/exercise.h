@@ -26,4 +26,10 @@ void exercise2_run();
 //exercise3
 void exercise3_init();
 void exercise3_run();
+
+//exercise4
+extern const uint8_t digits[10][7];
+extern uint8_t a, b, c, d, e, f, g;
+
+void display7SEG(int count);
 #endif /* SRC_EXERCISE_H_ */
