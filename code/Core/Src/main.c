@@ -22,8 +22,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "exercise1.h"
-#include "exercise4.h"
 #include "exercise6.h"
 /* USER CODE END Includes */
 
@@ -65,6 +63,7 @@ static void MX_GPIO_Init(void);
   */
 int main(void)
 {
+
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -98,9 +97,9 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
-
-	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
+	  exercise10_run();
+	  HAL_Delay(100);
   }
   /* USER CODE END 3 */
 }
@@ -125,6 +124,7 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+
   /** Initializes the CPU, AHB and APB buses clocks
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
@@ -148,49 +148,32 @@ void SystemClock_Config(void)
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
+  /* USER CODE BEGIN MX_GPIO_Init_1 */
+
+  /* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOA_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_RED_2_Pin|LED_YELLOW_2_Pin|LED_1_Pin|LED_2_Pin
-                          |LED_3_Pin|LED_4_Pin|LED_5_Pin|LED_6_Pin
-                          |LED_7_Pin|LED_8_Pin|LED_9_Pin|LED_10_Pin
-                          |LED_11_Pin|LED_12_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin
+                          |LED_5_Pin|LED_6_Pin|LED_7_Pin|LED_8_Pin
+                          |LED_9_Pin|LED_10_Pin|LED_11_Pin|LED_12_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, SEG_1_Pin|SEG_2_Pin|SEG_3_Pin|SEGMENT_4_Pin
-                          |SEGMENT_5_Pin|SEGMENT_6_Pin|SEGMENT_7_Pin|SEG_4_Pin
-                          |SEG_5_Pin|SEG_6_Pin|SEG_7_Pin|SEGMENT_1_Pin
-                          |SEGMENT_2_Pin|SEGMENT_3_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pins : LED_RED_2_Pin LED_YELLOW_2_Pin LED_1_Pin LED_2_Pin
-                           LED_3_Pin LED_4_Pin LED_5_Pin LED_6_Pin
-                           LED_7_Pin LED_8_Pin LED_9_Pin LED_10_Pin
-                           LED_11_Pin LED_12_Pin */
-  GPIO_InitStruct.Pin = LED_RED_2_Pin|LED_YELLOW_2_Pin|LED_1_Pin|LED_2_Pin
-                          |LED_3_Pin|LED_4_Pin|LED_5_Pin|LED_6_Pin
-                          |LED_7_Pin|LED_8_Pin|LED_9_Pin|LED_10_Pin
-                          |LED_11_Pin|LED_12_Pin;
+  /*Configure GPIO pins : LED_1_Pin LED_2_Pin LED_3_Pin LED_4_Pin
+                           LED_5_Pin LED_6_Pin LED_7_Pin LED_8_Pin
+                           LED_9_Pin LED_10_Pin LED_11_Pin LED_12_Pin */
+  GPIO_InitStruct.Pin = LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin
+                          |LED_5_Pin|LED_6_Pin|LED_7_Pin|LED_8_Pin
+                          |LED_9_Pin|LED_10_Pin|LED_11_Pin|LED_12_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : SEG_1_Pin SEG_2_Pin SEG_3_Pin SEGMENT_4_Pin
-                           SEGMENT_5_Pin SEGMENT_6_Pin SEGMENT_7_Pin SEG_4_Pin
-                           SEG_5_Pin SEG_6_Pin SEG_7_Pin SEGMENT_1_Pin
-                           SEGMENT_2_Pin SEGMENT_3_Pin */
-  GPIO_InitStruct.Pin = SEG_1_Pin|SEG_2_Pin|SEG_3_Pin|SEGMENT_4_Pin
-                          |SEGMENT_5_Pin|SEGMENT_6_Pin|SEGMENT_7_Pin|SEG_4_Pin
-                          |SEG_5_Pin|SEG_6_Pin|SEG_7_Pin|SEGMENT_1_Pin
-                          |SEGMENT_2_Pin|SEGMENT_3_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  /* USER CODE BEGIN MX_GPIO_Init_2 */
 
+  /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
@@ -211,8 +194,7 @@ void Error_Handler(void)
   }
   /* USER CODE END Error_Handler_Debug */
 }
-
-#ifdef  USE_FULL_ASSERT
+#ifdef USE_FULL_ASSERT
 /**
   * @brief  Reports the name of the source file and the source line number
   *         where the assert_param error has occurred.
@@ -228,5 +210,3 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

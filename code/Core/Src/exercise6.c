@@ -280,3 +280,30 @@ void clearNumberOnClock(int num){
 			break;
 		}
 }
+
+void displayClock(int hr, int min, int sec){
+	clearAllClock();
+	//hour
+	setNumberOnClock(hr%12);
+	//minute
+	setNumberOnClock(min/5);
+	//second
+	setNumberOnClock(sec/5);
+}
+
+int hr = 0, min = 0, sec = 0;
+void exercise10_run(){
+	if(sec >= 60){
+		min = min + 5;
+		sec = 0;
+	}
+	if(min >= 60){
+		hr++;
+		min = 0;
+	}
+	if(hr >= 24){
+		hr = 0;
+	}
+	displayClock(hr,min,sec);
+	++sec;
+}
