@@ -98,7 +98,7 @@ void exercise3_run() {
 }
 
 
-//exercise5
+//exercise4
 const uint8_t digits[10][7] = {
   {0,0,0,0,0,0,1}, //0
   {1,0,0,1,1,1,1}, //1
