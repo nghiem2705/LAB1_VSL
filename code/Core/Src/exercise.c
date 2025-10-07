@@ -94,7 +94,6 @@ void exercise3_run() {
     // Cập nhật state và counter
     current_state = next_state;
     count1 = (count1 + 1) % 10;
-    HAL_Delay(1000);
 }
 
 
@@ -139,18 +138,3 @@ void display7SEG(int count) {
     HAL_GPIO_WritePin(SEG_G_GPIO_Port, SEG_G_Pin, g);
 }
 
-
-int set_time = 0 ;
-
-void exercise5_run() {
-	exercise3_run();
-	if(count1 == 0) {
-		set_time = 5 ;
-	}else if (count1 == 5) {
-		set_time = 3;
-	}else {
-		set_time = 2 ;
-	}
-
-	display7SEG(set_time--);
-}

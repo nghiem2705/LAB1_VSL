@@ -4,3 +4,4 @@
 ../Core/Src/exercise.c:28:6:exercise2_run	3
 ../Core/Src/exercise.c:54:6:exercise3_init	1
 ../Core/Src/exercise.c:64:6:exercise3_run	9
+../Core/Src/exercise.c:123:6:display7SEG	1

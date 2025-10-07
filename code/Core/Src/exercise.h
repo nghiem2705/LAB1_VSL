@@ -32,4 +32,7 @@ extern const uint8_t digits[10][7];
 extern uint8_t a, b, c, d, e, f, g;
 
 void display7SEG(int count);
+
+//exercise5
+void exercise5_run();
 #endif /* SRC_EXERCISE_H_ */
