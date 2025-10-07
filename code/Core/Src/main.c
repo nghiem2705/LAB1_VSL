@@ -87,7 +87,6 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   /* USER CODE BEGIN 2 */
-  int count = 0;
   exercise3_init();
   /* USER CODE END 2 */
 
@@ -98,8 +97,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	exercise3_run();
-	display7SEG((count++) % 10);
+	exercise5_run();
 	HAL_Delay(1000);
   }
   /* USER CODE END 3 */

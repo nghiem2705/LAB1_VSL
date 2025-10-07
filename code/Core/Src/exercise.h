@@ -34,5 +34,8 @@ extern uint8_t a, b, c, d, e, f, g;
 void display7SEG(int count);
 
 //exercise5
+extern int time_led_red;
+extern int time_led_green;
+extern int time_led_yellow;
 void exercise5_run();
 #endif /* SRC_EXERCISE_H_ */

@@ -69,13 +69,13 @@ void exercise3_run() {
         case state1:
             HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
             HAL_GPIO_WritePin(LED_GREEN1_GPIO_Port, LED_GREEN1_Pin, SET);
-            if (count1 >= 2) next_state = state2;
+            if (count1 >= 3) next_state = state2;
             break;
 
         case state2:
             HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, SET);
             HAL_GPIO_WritePin(LED_YELLOW1_GPIO_Port, LED_YELLOW1_Pin, SET);
-            if (count1 >= 4) next_state = state3;
+            if (count1 >= 5) next_state = state3;
             break;
 
         case state3:
@@ -138,3 +138,20 @@ void display7SEG(int count) {
     HAL_GPIO_WritePin(SEG_G_GPIO_Port, SEG_G_Pin, g);
 }
 
+//exercise 5
+int time_led_red = 5;
+int time_led_green = 3;
+int time_led_yellow = 2;
+void exercise5_run() {
+	exercise3_run();
+	if (current_state == state1 || current_state == state2) {
+		display7SEG(time_led_red--);
+		if (time_led_red <= 0) time_led_red = 5 ;
+	}else if (current_state == state3) {
+		display7SEG(time_led_green--);
+		if (time_led_green <= 0) time_led_green = 3;
+	}else if (current_state == state4) {
+		display7SEG(time_led_yellow--);
+		if (time_led_yellow <= 0) time_led_yellow = 2;
+	}
+}

@@ -5,3 +5,4 @@
 ../Core/Src/exercise.c:54:6:exercise3_init	8	static
 ../Core/Src/exercise.c:64:6:exercise3_run	8	static
 ../Core/Src/exercise.c:123:6:display7SEG	16	static
+../Core/Src/exercise.c:145:6:exercise5_run	8	static
