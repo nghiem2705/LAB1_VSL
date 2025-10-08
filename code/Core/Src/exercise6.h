@@ -10,10 +10,10 @@
 
 #include "main.h"
 
-
+void displayNumber(int num);
+void clearAllClock();
 void setNumberOnClock(int num);
 void  clearNumberOnClock(int num);
-void displayNumber(int num);
 
 
 #endif /* SRC_EXERCISE6_H_ */
