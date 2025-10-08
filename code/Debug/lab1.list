@@ -155,10 +155,10 @@ void exercise3_run() {
  80001c8:	2110      	movs	r1, #16
  80001ca:	4830      	ldr	r0, [pc, #192]	@ (800028c <exercise3_run+0xf8>)
  80001cc:	f000 fd4a 	bl	8000c64 <HAL_GPIO_WritePin>
-            if (count1 >= 3) next_state = state2;
+            if (count1 >= 2) next_state = state2;
  80001d0:	4b2f      	ldr	r3, [pc, #188]	@ (8000290 <exercise3_run+0xfc>)
  80001d2:	681b      	ldr	r3, [r3, #0]
- 80001d4:	2b02      	cmp	r3, #2
+ 80001d4:	2b01      	cmp	r3, #1
  80001d6:	dd39      	ble.n	800024c <exercise3_run+0xb8>
  80001d8:	4b2e      	ldr	r3, [pc, #184]	@ (8000294 <exercise3_run+0x100>)
  80001da:	2202      	movs	r2, #2
@@ -177,10 +177,10 @@ void exercise3_run() {
  80001ec:	2108      	movs	r1, #8
  80001ee:	4827      	ldr	r0, [pc, #156]	@ (800028c <exercise3_run+0xf8>)
  80001f0:	f000 fd38 	bl	8000c64 <HAL_GPIO_WritePin>
-            if (count1 >= 5) next_state = state3;
+            if (count1 >= 4 ) next_state = state3;
  80001f4:	4b26      	ldr	r3, [pc, #152]	@ (8000290 <exercise3_run+0xfc>)
  80001f6:	681b      	ldr	r3, [r3, #0]
- 80001f8:	2b04      	cmp	r3, #4
+ 80001f8:	2b03      	cmp	r3, #3
  80001fa:	dd29      	ble.n	8000250 <exercise3_run+0xbc>
  80001fc:	4b25      	ldr	r3, [pc, #148]	@ (8000294 <exercise3_run+0x100>)
  80001fe:	2203      	movs	r2, #3
@@ -199,10 +199,10 @@ void exercise3_run() {
  8000210:	2104      	movs	r1, #4
  8000212:	481e      	ldr	r0, [pc, #120]	@ (800028c <exercise3_run+0xf8>)
  8000214:	f000 fd26 	bl	8000c64 <HAL_GPIO_WritePin>
-            if (count1 >= 7) next_state = state4;
+            if (count1 >= 6) next_state = state4;
  8000218:	4b1d      	ldr	r3, [pc, #116]	@ (8000290 <exercise3_run+0xfc>)
  800021a:	681b      	ldr	r3, [r3, #0]
- 800021c:	2b06      	cmp	r3, #6
+ 800021c:	2b05      	cmp	r3, #5
  800021e:	dd19      	ble.n	8000254 <exercise3_run+0xc0>
  8000220:	4b1c      	ldr	r3, [pc, #112]	@ (8000294 <exercise3_run+0x100>)
  8000222:	2204      	movs	r2, #4
@@ -221,10 +221,10 @@ void exercise3_run() {
  8000234:	2104      	movs	r1, #4
  8000236:	4815      	ldr	r0, [pc, #84]	@ (800028c <exercise3_run+0xf8>)
  8000238:	f000 fd14 	bl	8000c64 <HAL_GPIO_WritePin>
-            if (count1 >= 9) next_state = state1;
+            if (count1 >= 8) next_state = state1;
  800023c:	4b14      	ldr	r3, [pc, #80]	@ (8000290 <exercise3_run+0xfc>)
  800023e:	681b      	ldr	r3, [r3, #0]
- 8000240:	2b08      	cmp	r3, #8
+ 8000240:	2b07      	cmp	r3, #7
  8000242:	dd09      	ble.n	8000258 <exercise3_run+0xc4>
  8000244:	4b13      	ldr	r3, [pc, #76]	@ (8000294 <exercise3_run+0x100>)
  8000246:	2201      	movs	r2, #1
